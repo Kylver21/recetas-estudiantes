@@ -3,7 +3,7 @@
     {
       "id": 1,
       "nombre": "Pasta Universitaria Rápida",
-      "imagen": "/placeholder-recipe.svg",
+      "imagen": "https://i.ytimg.com/vi/nPWrvcx3llM/maxresdefault.jpg",
       "ingredientes": ["400g pasta", "1 lata tomate triturado", "2 dientes ajo", "100g queso parmesano", "Aceite de oliva", "Sal y pimienta"],
       "pasos": [
         "Hervir agua con sal y cocinar la pasta según instrucciones",
@@ -21,7 +21,7 @@
     {
       "id": 2,
       "nombre": "Quesadillas de Pollo",
-      "imagen": "/placeholder-recipe.svg",
+      "imagen": "https://www.annarecetasfaciles.com/files/quesadilla-pollo-1-scaled.jpg",
       "ingredientes": ["2 tortillas de harina", "150g pollo cocido", "100g queso oaxaca", "1/2 cebolla", "1 pimiento", "Aceite", "Sal"],
       "pasos": [
         "Picar el pollo, cebolla y pimiento en cubos pequeños",
@@ -39,7 +39,7 @@
     {
       "id": 3,
       "nombre": "Arroz Frito Estudiantil",
-      "imagen": "/placeholder-recipe.svg",
+      "imagen": "https://www.uexternado.edu.co/wp-content/uploads/2020/11/arroz-atollado.jpg",
       "ingredientes": ["2 tazas arroz cocido", "2 huevos", "100g jamón", "1 zanahoria", "Cebollín", "Salsa de soja", "Aceite"],
       "pasos": [
         "Batir los huevos y hacer una tortilla, cortar en tiras",
@@ -57,7 +57,7 @@
     {
       "id": 4,
       "nombre": "Sandwich Club Estudiantil",
-      "imagen": "/placeholder-recipe.svg",
+      "imagen": "https://ybarraentucocina.com/wp-content/uploads/2020/10/recetas-ybarra-sandwich-club-mayonesa.jpg",
       "ingredientes": ["3 rebanadas pan integral", "150g pechuga pollo", "4 rebanadas tocino", "Lechuga", "Tomate", "Mayonesa", "Aguacate"],
       "pasos": [
         "Tostar las rebanadas de pan",
@@ -75,7 +75,7 @@
     {
       "id": 5,
       "nombre": "Smoothie Bowl Energético",
-      "imagen": "/placeholder-recipe.svg",
+      "imagen": "https://img-global.cpcdn.com/recipes/f642243e0250c936/680x482cq80/desayuno-completo-smoothie-bowl-energetico-foto-principal.jpg",
       "ingredientes": ["1 plátano congelado", "1/2 taza fresas", "1/2 taza yogurt griego", "1 cda miel", "Granola", "Coco rallado", "Chía"],
       "pasos": [
         "Licuar el plátano, fresas, yogurt y miel hasta obtener consistencia cremosa",
@@ -93,7 +93,7 @@
     {
       "id": 6,
       "nombre": "Pizza Casera Express",
-      "imagen": "/placeholder-recipe.svg",
+      "imagen": "https://www.recetasdesbieta.com/wp-content/uploads/2018/09/Como-hacer-pizza-casera-rapida-con-masa-de-pizza-sin-repos-1.jpg",
       "ingredientes": ["1 base pizza", "1/2 taza salsa tomate", "200g queso mozzarella", "Pepperoni", "Champiñones", "Orégano"],
       "pasos": [
         "Precalentar horno a 220°C",
@@ -111,7 +111,7 @@
     {
       "id": 7,
       "nombre": "Tacos de Pescado",
-      "imagen": "/placeholder-recipe.svg",
+      "imagen": "https://veggiefestchicago.org/wp-content/uploads/2023/04/Fish-Tacos.jpg",
       "ingredientes": ["4 tortillas maíz", "300g filete pescado", "Repollo morado", "Aguacate", "Limón", "Crema", "Cilantro", "Sal"],
       "pasos": [
         "Sazonar el pescado con sal, pimienta y limón",
@@ -129,7 +129,7 @@
     {
       "id": 8,
       "nombre": "Ensalada César Completa",
-      "imagen": "/placeholder-recipe.svg",
+      "imagen": "https://www.goodnes.com/sites/g/files/jgfbjl321/files/srh_recipes/755f697272cbcdc6e5df2adb44b1b705.jpg",
       "ingredientes": ["1 lechuga romana", "150g pechuga pollo", "Pan tostado", "Queso parmesano", "Huevo", "Mostaza", "Limón", "Aceite oliva"],
       "pasos": [
         "Lavar y cortar la lechuga en trozos",
@@ -143,6 +143,30 @@
       "categoria": "saludable",
       "valoracion": 4.2,
       "porciones": 2
+    },
+    {
+      "id": 9,
+      "nombre": "Chiskey de maracuyá",
+      "imagen": "https://i0.wp.com/recetaskwa.com/wp-content/uploads/2024/01/Cheescake-Maracuya_2.jpg?ssl=1",
+      "ingredientes": [
+        "1 lata leche condensada",
+        "1 lata leche evaporada",
+        "1 paquete galletas María",
+        "1 taza pulpa de maracuyá",
+        "100g mantequilla derretida"
+      ],
+      "pasos":  [
+        "Tritura las galletas María y mézclalas con la mantequilla derretida.",
+        "Coloca la mezcla en el fondo de un molde y presiona para formar la base.",
+        "Licúa la leche condensada, leche evaporada y la pulpa de maracuyá.",
+        "Vierte la mezcla sobre la base de galleta.",
+        "Refrigera por al menos 2 horas antes de servir."
+      ],
+      "tiempo": 15,
+      "dificultad": "medio",
+      "categoria": "postres",
+      "valoracion": 4.9,
+      "porciones": 6
     }
   ]
 }
