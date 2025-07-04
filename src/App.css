@@ -929,7 +929,7 @@ body {
 }
 
 .stats-card .card-title {
-  color: #4f46e5;
+  color: #1e293b;
   font-weight: 700;
   font-size: 1.35rem;
   margin-bottom: 1.5rem;
@@ -942,7 +942,7 @@ body {
 
 .stats-card .card-title i {
   font-size: 1.5rem;
-  color: #818cf8;
+  color: #1e293b;
 }
 
 .stats-total {
