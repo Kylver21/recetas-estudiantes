@@ -27,7 +27,7 @@ const FilterBar: React.FC<FilterBarProps> = ({
           placeholder="🔍 Buscar recetas..."
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="search-input"
+          className="main-input search-input"
         />
       </div>
       

@@ -1,20 +1,32 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useRecipes } from '../hooks/useRecipes';
 import RecipeCard from '../components/RecipeCard';
+import SearchBar from '../components/SearchBar';
 
 const HomePage: React.FC = () => {
   const { recetas } = useRecipes();
+  const [searchTerm, setSearchTerm] = useState('');
 
-  // Obtener las recetas más valoradas (top 3)
-  const recetasDestacadas = recetas
-    .sort((a, b) => b.valoracion - a.valoracion)
-    .slice(0, 3);
+  // Filtrar recetas por nombre según el término de búsqueda
+  const recetasFiltradas = useMemo(() => {
+    if (!searchTerm.trim()) return recetas;
+    return recetas.filter(receta =>
+      receta.nombre.toLowerCase().includes(searchTerm.trim().toLowerCase())
+    );
+  }, [recetas, searchTerm]);
 
-  // Obtener recetas rápidas (menos de 20 minutos)
-  const recetasRapidas = recetas
-    .filter(receta => receta.tiempo <= 20)
-    .slice(0, 3);
+  // Obtener las recetas más valoradas (top 3) filtradas
+  const recetasDestacadas = useMemo(() =>
+    [...recetasFiltradas].sort((a, b) => b.valoracion - a.valoracion).slice(0, 3),
+    [recetasFiltradas]
+  );
+
+  // Obtener recetas rápidas (menos de 20 minutos) filtradas
+  const recetasRapidas = useMemo(() =>
+    recetasFiltradas.filter(receta => receta.tiempo <= 20).slice(0, 3),
+    [recetasFiltradas]
+  );
 
   return (
     <div className="home-page">
@@ -24,6 +36,9 @@ const HomePage: React.FC = () => {
           <p className="hero-subtitle">
             Deliciosas recetas fáciles, rápidas y económicas para estudiantes universitarios
           </p>
+          <div className="search-container">
+            <SearchBar onSearch={setSearchTerm} />
+          </div>
           <div className="hero-buttons">
             <Link to="/recetas" className="cta-button primary">
               Explorar Recetas
@@ -38,9 +53,13 @@ const HomePage: React.FC = () => {
       <section className="featured-section">
         <h2 className="section-title">⭐ Recetas Más Valoradas</h2>
         <div className="recipes-grid">
-          {recetasDestacadas.map(receta => (
-            <RecipeCard key={receta.id} recipe={receta} />
-          ))}
+          {recetasDestacadas.length === 0 ? (
+            <p>No se encontraron recetas con ese nombre.</p>
+          ) : (
+            recetasDestacadas.map(receta => (
+              <RecipeCard key={receta.id} recipe={receta} />
+            ))
+          )}
         </div>
         <div className="section-footer">
           <Link to="/recetas" className="view-all-link">
@@ -53,9 +72,13 @@ const HomePage: React.FC = () => {
         <h2 className="section-title">⚡ Recetas Rápidas</h2>
         <p className="section-subtitle">Perfectas para cuando tienes poco tiempo</p>
         <div className="recipes-grid">
-          {recetasRapidas.map(receta => (
-            <RecipeCard key={receta.id} recipe={receta} />
-          ))}
+          {recetasRapidas.length === 0 ? (
+            <p>No se encontraron recetas rápidas con ese nombre.</p>
+          ) : (
+            recetasRapidas.map(receta => (
+              <RecipeCard key={receta.id} recipe={receta} />
+            ))
+          )}
         </div>
       </section>
 
